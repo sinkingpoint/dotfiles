@@ -173,6 +173,7 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/.local/bin
 
 source ~/.dotfiles/prompt.zsh
+source ~/.dotfiles/jump.zsh
 
 if [ -z $TMUX ]; then
     (tmux ls | grep -vq attached && exec tmux -2 at) || exec tmux -2
