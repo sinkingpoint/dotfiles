@@ -86,6 +86,8 @@ alias reboot='sudo reboot'
 
 # Net Shortcuts
 alias digg='dig @8.8.8.8'
+alias digc='dig @1.1.1.1'
+alias cwhois='whois -h whois.cymru.com'
 alias curlh='curl -vso /dev/null'
 
 if [ -d ~/go/bin ]; then
@@ -171,7 +173,6 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/.local/bin
 
 source ~/.dotfiles/prompt.zsh
-source ~/.dotfiles/ops.zsh
 
 if [ -z $TMUX ]; then
     (tmux ls | grep -vq attached && exec tmux -2 at) || exec tmux -2

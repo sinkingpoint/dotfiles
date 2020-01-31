@@ -23,6 +23,12 @@ endfunc
 
 set relativenumber
 nnoremap <C-n> :call NumberToggle()<cr>
+nnoremap <C-Tab> :tabprevious<CR>
+nnoremap <C-S-Tab>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-Tab> <Esc>:tabprevious<CR>i
+inoremap <C-S-Tab>   <Esc>:tabnext<CR>i
+inoremap <C-t>     <Esc>:tabnew<CR>
 
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
@@ -71,9 +77,9 @@ set undofile
 set autoindent
 set smartindent
 set smarttab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
 set expandtab
 
 filetype plugin on
