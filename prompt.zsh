@@ -63,11 +63,15 @@ git_info() {
 
 }
 
+nice_date(){
+  echo $(date +'%d/%m/%Y %H:%M:%S %Z ')
+}
+
 # Use ❯ as the non-root prompt character; # for root
 # Change the prompt character color if the last command had a nonzero exit code
 PS1='
 $(ssh_info)%{$fg[cyan]%}%~%u $(git_info)
-%(?.%{$fg[cyan]%}.%{$fg[red]%})%(!.#.❯)%{$reset_color%} '
+%{$fg[cyan]%}$(nice_date)%{$reset_color%}%(?.%{$fg[cyan]%}.%{$fg[red]%})%(!.#.❯)%{$reset_color%} '
 
 export CLICOLOR=1
 export LSCOLORS=gxxxxxxxBx
