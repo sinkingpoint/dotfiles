@@ -159,6 +159,12 @@ chpwd() {
     print -l $PWD ${(u)dirstack} >$DIRSTACKFILE
 }
 
+if [[ -d ~/.srcs && `ls ~/.srcs | wc -l` != '0' ]]; then
+  for file in ~/.srcs/*; do
+    source "${file}"
+  done
+fi
+
 DIRSTACKSIZE=20
 
 setopt autopushd pushdsilent pushdtohome
