@@ -170,6 +170,7 @@ setopt pushdminus
 
 alias vi="vim"
 export PATH=$PATH:/usr/local/go/bin
+export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=$PATH:~/.local/bin
 
 source ~/.dotfiles/prompt.zsh
