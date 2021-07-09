@@ -178,6 +178,8 @@ alias vi="vim"
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/bin
+export KUBECONFIG=/home/colin/.kubeconfig
 
 source ~/.dotfiles/prompt.zsh
 source ~/.dotfiles/jump.zsh
@@ -185,3 +187,5 @@ source ~/.dotfiles/jump.zsh
 if [ -z $TMUX ]; then
     (tmux ls | grep -vq attached && exec tmux -2 at) || exec tmux -2
 fi
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
